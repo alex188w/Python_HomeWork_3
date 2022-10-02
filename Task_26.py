@@ -16,36 +16,27 @@ if num.isdigit() == False:
     exit()
 
 num = int(num)
-fib_nega = [-1, 1]
+
 fib_pos = [1, 1]
+fib1_1 = fib1_2 = 1
+i = 2     
+while i < num:
+    fib_sum = fib1_2 + fib1_1
+    fib1_1 = fib1_2
+    fib1_2 = fib_sum
+    i += 1
+    fib_pos.append(fib_sum)   
 
-def pos_fib(n):
-    fib1 = fib2 = 1
-    i = 2    
-    
-    while i < n:
-        fib_sum = fib2 + fib1
-        fib1 = fib2
-        fib2 = fib_sum
-        i += 1
-        fib_pos.append(fib_sum)
-    return fib_sum 
-
-def nega_fib(n):    
-    fib1 = 1
-    fib2 = - 1
-    i = 2    
-    
-    while i < n:
-        fib_sum = fib1 - fib2 
-        fib1 = fib2
-        fib2 = fib_sum
-        i += 1
-        fib_nega.insert(0, fib_sum)
-    return fib_sum 
-    
-pos_fib(num)
-nega_fib(num)
+fib_nega = [-1, 1]
+fib2_1 = 1
+fib2_2 = -1
+i = 2    
+while i < num:
+    fib_sum = fib2_1 - fib2_2 
+    fib2_1 = fib2_2
+    fib2_2 = fib_sum
+    i += 1
+    fib_nega.insert(0, fib_sum)
 
 fib_pos.insert(0, 0)
 fib = fib_nega + fib_pos
