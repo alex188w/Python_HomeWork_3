@@ -13,11 +13,17 @@ import random
 my_list = []
 
 for i in range(5):
-    num = random.random() * (100 + 100) - 100
+    num = random.random() * 100 
     my_list.append(round(num, 2))
     
 print(f'Заданный сисок: {my_list}')
 
+my_list = [round(val % 1, 2) for val in my_list]
+print(f'Заданный сисок: {my_list}')
+rev_result = max(my_list) - min(my_list)
+print(f'Разница между значеними :  {rev_result:.2f}')
+
+exit()
 max_i = 0
 min_i = 0.99
 

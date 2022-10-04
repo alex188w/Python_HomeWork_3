@@ -34,10 +34,10 @@ if len_sp % 2 == 0:
         my_list_mult.append(mult_p)
         
 else:
-    for i in range(len_sp // 2):
+    for i in range(len_sp // 2 + 1):
         mult_p = my_list[i] * my_list[len_sp - 1 - i]      
         my_list_mult.append(mult_p)
-    elem = my_list[len_sp // 2]**2
-    my_list_mult.append(elem)
+    # elem = my_list[len_sp // 2]**2
+    # my_list_mult.append(elem)
 
 print(f'Призведение пар чисел исходного списка: {my_list_mult}')

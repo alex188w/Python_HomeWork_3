@@ -15,8 +15,8 @@ sum_n = 0
 for i in range(5):
     num = random.randint(0, 99) 
     my_list.append(num)
-    if i % 2 != 0:
-        sum_n += my_list[i]
+    # if i % 2 != 0:
+    #     sum_n += my_list[i]
 
 print(f'Заданный сисок: {my_list}')
-print(f'Сумма элементов на нечетных позициях: {sum_n}')
+print(f'Сумма элементов на нечетных позициях: {sum(my_list[1::2])}')

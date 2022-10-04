@@ -15,6 +15,12 @@ if num.isdigit() == False:
     exit()
 
 num = int(num)
+
+print(bin(num)[2:]) # Вывод строки со втрого элемента
+
+print(int(bin(num)[2:])) # Вывод преобразованием в число
+
+exit()
 remain = ''
 while num > 0:
     remain = str(num % 2) + remain
